@@ -65,13 +65,13 @@
 
 
 ## ⬇️ Installation and Run with docker
-
-# Run
+```
+  # Run
 $ docker-compose up -d --build
 
 # Then Run
 $ docker-compose exec web python ./runningTask/manage.py migrate
-
+```
 
 ## ⬇️ Installation on local host 
  - First, fork this repository 🍴 and follow the given instructions:
