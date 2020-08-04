@@ -20,9 +20,6 @@ dotenv_path = join(dirname(__file__), ".env")
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-load_dotenv(dotenv_path)
-
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "eak47-e!^d1atfp^bl&oslsch!sgjxq*t#gh@@t!=f^vee_%)t"
 
@@ -82,16 +79,6 @@ WSGI_APPLICATION = "runningTask.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.postgresql",
-#         "NAME": os.environ["POSTGRES_DBNAME"],
-#         "USER": os.environ["POSTGRES_USERNAME"],
-#         "PASSWORD": os.environ["POSTGRES_PASSWORD"],
-#         "HOST": os.environ["POSTGRES_HOST"],
-#         "PORT": os.environ["POSTGRES_PORT"],
-#     }
-# }
 
 DATABASES = {
     "default": {
