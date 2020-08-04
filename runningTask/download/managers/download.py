@@ -29,8 +29,7 @@ class DownloadManager:
         data = self.c.execute(query)
         while True:
             data = self.c.fetchone()
-        # what is this ? 
-            if data == None:   
+            if data == None:
                 self.headers = ",".join(self.headers)
                 break
             self.headers.append(str(data[0]))
@@ -49,10 +48,10 @@ class DownloadManager:
         c = connection.cursor()
         f = None
         if self.currentRow == 0:
-            f = open(f"./public/{self.tableName}.csv", "w+")
+            f = open(f"/code/runningTask/public/{self.tableName}.csv", "w+")
             f.write(self.headers)
         else:
-            f = open(f"./public/{self.tableName}.csv", "a+")
+            f = open(f"/code/runningTask/public/{self.tableName}.csv", "a+")
         self.isPaused = False
         self.isTerminated = False
         while self.total_entries - self.currentRow > 0:

@@ -1,10 +1,7 @@
 # Introduction
-![](https://github.com/Manvityagi/Task-State-Manager/blob/master/images/start.PNG)
+![](https://github.com/Manvityagi/Atlan-Challenge---Long-Running-Task-Manager/blob/master/images/start.PNG)
 
 **Task State Manager** is an implementation of an upload/download system in which the functionality of pausing/resuming/terminating the task at hand is poosible.
-
-
-## [VIEW LIVE DEMO](https://hidden-savannah-59110.herokuapp.com/)
 
 
 ## ❓ Problem  Statement
@@ -13,8 +10,6 @@
 ## 🚧  Technology Stack
 - **Framework** - Django Rest Framework 
 - **Database** - PostgreSQL
-- **Cloud database service** - MongoDB Atlas
-- **Deployment** - Heroku
 - **Python** - version 3   
 
 
@@ -76,10 +71,10 @@
  - First, fork this repository 🍴 and follow the given instructions:
  ```
  # clone the repository to your local machine
-$ git clone https://github.com/<YOUR-GITHUB-USERNAME>/Entry-Management-Software.git
+$ git clone  https://github.com/<YOUR-GITHUB-USERNAME>/Atlan-Challenge---Long-Running-Task-Manager
 
 # navigate to the project's directory and install all the relevant dev-dependencies
-$ cd Entry-Management-Software && pip install
+$ cd Atlan-Challenge---Long-Running-Task-Manager && pip install
 
 # Make a .env file and include the Database details
 
@@ -90,9 +85,9 @@ $ python manage.py runserver
  ```
  
  ## Demo Images
-![](https://github.com/Manvityagi/Task-State-Manager/blob/master/images/demo%60.PNG)
-![](https://github.com/Manvityagi/Task-State-Manager/blob/master/images/demo2.PNG)
-![](https://github.com/Manvityagi/Task-State-Manager/blob/master/images/demo3.PNG)
+![](https://github.com/Manvityagi/Atlan-Challenge---Long-Running-Task-Manager/blob/master/images/demo%60.PNG)
+![](https://github.com/Manvityagi/Atlan-Challenge---Long-Running-Task-Manager/blob/master/images/demo2.PNG)
+![](https://github.com/Manvityagi/Atlan-Challenge---Long-Running-Task-Manager/blob/master/images/demo3.PNG)
 
 
 

@@ -24,7 +24,6 @@ class UploadManager:
         self.total_rows = 0
         super().__init__()
 
-    # duplicate table name ko handle kar lena yaha
     def create_table(self):
         """Method to create a table and save to the database.
 

@@ -63,7 +63,7 @@ ROOT_URLCONF = "runningTask.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR,'public')],
+        "DIRS": [os.path.join(BASE_DIR, "public")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -96,14 +96,13 @@ WSGI_APPLICATION = "runningTask.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "Atlan",
+        "NAME": "postgres",
         "USER": "postgres",
-        "PASSWORD": "abcd",
-        "HOST": "localhost",
+        "PASSWORD": "postgres",
+        "HOST": "db",
         "PORT": "5432",
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
