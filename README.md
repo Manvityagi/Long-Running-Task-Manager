@@ -89,7 +89,11 @@ $ docker-compose exec web python ./runningTask/manage.py migrate
 $ git clone https://github.com/Manvityagi/Atlan-Challenge---Long-Running-Task-Manager.git
 
 # navigate to the project's directory and install all the relevant dev-dependencies
-$ cd Atlan-Challenge---Long-Running-Task-Manager && pip install
+$ cd Atlan-Challenge---Long-Running-Task-Manager && pip install -r 
+
+# make migrations
+$ python manage.py migrate
+$ python manage.py makemigrations
 
 # Start application
 $ python manage.py runserver
