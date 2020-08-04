@@ -14,6 +14,44 @@
 - **Database** - PostgreSQL
 - **Python** - version 3.8.2
 
+## ⬇️ Installation and Run with docker
+
+```
+# clone the repository to your local machine
+$ git clone https://github.com/Manvityagi/Atlan-Challenge---Long-Running-Task-Manager.git
+
+# navigate to the project's directory and install all the relevant dev-dependencies
+$ cd Atlan-Challenge---Long-Running-Task-Manager 
+
+# Run
+$ docker-compose up -d --build
+
+# Then Run
+$ docker-compose exec web python ./runningTask/manage.py migrate
+
+# Visit http://localhost:8000/ in your browser
+```
+
+## ⬇️ Installation on local host
+
+```
+# clone the repository to your local machine
+$ git clone https://github.com/Manvityagi/Atlan-Challenge---Long-Running-Task-Manager.git
+
+# navigate to the project's directory and install all the relevant dev-dependencies
+$ cd Atlan-Challenge---Long-Running-Task-Manager && pip install -r 
+
+# make migrations
+$ python manage.py migrate
+$ python manage.py makemigrations
+
+# Start application
+$ python manage.py runserver
+
+# Visit http://127.0.0.1:8000/ in your browser
+```
+
+
 # 💡 Approach
 
 ### Upload
@@ -66,40 +104,6 @@
 
 ## [VIEW API DOCUMENTATION](https://documenter.getpostman.com/view/6209199/T1DwbYtX?version=latest)
 
-## ⬇️ Installation and Run with docker
-
-```
-# clone the repository to your local machine
-$ git clone https://github.com/Manvityagi/Atlan-Challenge---Long-Running-Task-Manager.git
-
-# navigate to the project's directory and install all the relevant dev-dependencies
-$ cd Atlan-Challenge---Long-Running-Task-Manager && pip install requirements.txt
-
-# Run
-$ docker-compose up -d --build
-
-# Then Run
-$ docker-compose exec web python ./runningTask/manage.py migrate
-```
-
-## ⬇️ Installation on local host
-
-```
-# clone the repository to your local machine
-$ git clone https://github.com/Manvityagi/Atlan-Challenge---Long-Running-Task-Manager.git
-
-# navigate to the project's directory and install all the relevant dev-dependencies
-$ cd Atlan-Challenge---Long-Running-Task-Manager && pip install -r 
-
-# make migrations
-$ python manage.py migrate
-$ python manage.py makemigrations
-
-# Start application
-$ python manage.py runserver
-
-# Visit http://127.0.0.1:8000/ in your browser
-```
 
 ## Demo Images
 
