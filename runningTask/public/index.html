@@ -79,7 +79,7 @@
       let middlePath;
       function uploadSetter() {
         middlePath = "upload";
-        const tableName = $("#tableName").val();
+        const tableName = $("#tableName").val().trim();
         $.getJSON(
           "http://127.0.0.1:8000/upload/exists/" + tableName,
           (data) => {
@@ -93,7 +93,7 @@
       }
       function downloadSetter() {
         middlePath = "download";
-        const tableName = $("#tableName").val();
+        const tableName = $("#tableName").val().trim();
         $.getJSON(
           "http://127.0.0.1:8000/upload/exists/" + tableName,
           (data) => {
@@ -118,8 +118,8 @@
                 $("#downloadStart").show();
                 $("#resumeProcess").hide();
                 $("#terminateProcess").hide();
-                $("#tableName").prop("disabled", false); //hello
-                const tableName = $("#tableName").val();
+                $("#tableName").prop("disabled", false); 
+                const tableName = $("#tableName").val().trim();
                 $("#tableName").val("");
                 if (middlePath === "upload") {
                   $("#message").html(
@@ -146,7 +146,7 @@
         $("#resumeProcess").show();
         $("#terminateProcess").show();
         $("#tableName").prop("disabled", true);
-        const tableName = $("#tableName").val();
+        const tableName = $("#tableName").val().trim();
         $("#message").html(`${middlePath} process started for ${tableName}`);
         $.ajax({
           type: "POST",
@@ -162,7 +162,7 @@
       }
       function resume() {
         const res = $("#resumeProcess").html().trim();
-        const tableName = $("#tableName").val();
+        const tableName = $("#tableName").val().trim();
         if (res === "Pause") {
           $("#resumeProcess").html("Resume");
           $("#message").html(`${middlePath} process paused for ${tableName}`);
@@ -188,7 +188,7 @@
         }
       }
       function terminate() {
-        const tableName = $("#tableName").val();
+        const tableName = $("#tableName").val().trim();
         $("#message").html(`${middlePath} process Terminated for ${tableName}`);
         $.ajax({
           type: "POST",
