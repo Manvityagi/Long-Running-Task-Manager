@@ -64,10 +64,16 @@
   ## [VIEW API DOCUMENTATION](https://documenter.getpostman.com/view/6209199/T1DwbYtX?version=latest)
 
 
+## ⬇️ Installation and Run with docker
+
+# Run
+$ docker-compose up -d --build
+
+# Then Run
+$ docker-compose exec web python ./runningTask/manage.py migrate
 
 
-
-## ⬇️ Installation
+## ⬇️ Installation on local host 
  - First, fork this repository 🍴 and follow the given instructions:
  ```
  # clone the repository to your local machine
