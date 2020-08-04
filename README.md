@@ -12,17 +12,17 @@
 
 - **Framework** - Django Rest Framework
 - **Database** - PostgreSQL
-- **Python** - version 3
+- **Python** - version 3.8.2
 
 # 💡 Approach
 
 ### Upload
 
-- A dummy CSV file is read using pandas and uploaded row by row to a table in database.
+- A dummy CSV file is read using pandas and added row by row to a table in database.
   #### Pause
   Number of lines read are constantly being recorded, when paused an Interrupt Exception is raised which stops the upload.
   #### Resume
-  The uplaod start funtion is called again but this time the CSV file is read from the checkpoint that we stored earlier.
+  The upload start funtion is called again but this time the CSV file is read from the checkpoint that we stored earlier.
   ### Terminate
   In this situation, the application needed to get back to the work done before this wrong upload started, so I dropped this particular table.
   ### Progress
@@ -34,7 +34,7 @@
   #### Pause
   Number of lines read are constantly being recorded, when paused an Interrupt Exception is raised which stops the export.
   #### Resume
-  The downlaod start funtion is called again but this time the databse table is read from the checkpoint that we stored earlier.
+  The download start funtion is called again but this time the database table is read from the checkpoint that we stored earlier.
   ### Terminate
   In this situation, the application needed to get back to the work done before this wrong upload started, so I removed the exported CSV file.
   ### Progress
@@ -68,14 +68,12 @@
 
 ## ⬇️ Installation and Run with docker
 
-- First, fork this repository 🍴 and follow the given instructions:
-
 ```
 # clone the repository to your local machine
-$ git clone  https://github.com/<YOUR-GITHUB-USERNAME>/Atlan-Challenge---Long-Running-Task-Manager
+$ git clone https://github.com/Manvityagi/Atlan-Challenge---Long-Running-Task-Manager.git
 
 # navigate to the project's directory and install all the relevant dev-dependencies
-$ cd Atlan-Challenge---Long-Running-Task-Manager && pip install
+$ cd Atlan-Challenge---Long-Running-Task-Manager && pip install requirements.txt
 
 # Run
 $ docker-compose up -d --build
@@ -86,16 +84,12 @@ $ docker-compose exec web python ./runningTask/manage.py migrate
 
 ## ⬇️ Installation on local host
 
-- First, fork this repository 🍴 and follow the given instructions:
-
 ```
 # clone the repository to your local machine
-$ git clone  https://github.com/<YOUR-GITHUB-USERNAME>/Atlan-Challenge---Long-Running-Task-Manager
+$ git clone https://github.com/Manvityagi/Atlan-Challenge---Long-Running-Task-Manager.git
 
 # navigate to the project's directory and install all the relevant dev-dependencies
 $ cd Atlan-Challenge---Long-Running-Task-Manager && pip install
-
-# Make a .env file and include the Database details
 
 # Start application
 $ python manage.py runserver
